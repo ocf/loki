@@ -8,7 +8,7 @@ test:
 	echo "Nothing to test!"
 
 helm:
-	helm template loki loki/loki -n app-loki > kubernetes/loki.yaml
+	helm template loki loki/loki -n app-loki -f config.yaml > kubernetes/loki.yaml
 
 
 .PHONY: cook-image push-image test helm
